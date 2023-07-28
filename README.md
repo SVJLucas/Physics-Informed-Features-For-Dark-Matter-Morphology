@@ -1,7 +1,9 @@
 # Physics Informed Features For Dark Matter Morphology
 
 
-![GSoC (1)](https://github.com/SVJLucas/Physics-Informed-Features-For-Dark-Matter-Morphology/assets/60625769/3818c901-e738-4d6a-a53a-d39adac87e2c)
+
+![Google_Summer_of_Code_logo_(2021) svg](https://github.com/SVJLucas/Physics-Informed-Features-For-Dark-Matter-Morphology/assets/60625769/ac669c97-02ef-48cb-877c-1d794a506476)
+
 
 
 
