@@ -273,5 +273,6 @@ You can get any of $\mathcal{A}_{raw}(x_i,y_i)$ or $\mathcal{A}(x_i,y_i)$ just c
 # Next Steps
 
 * Implement the Fast Marching method, analogous to Dijkstra's algorithm, to solve the non-linear **Anisotropic Eikonal Partial Differential Equation**: $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)$, with the initial condition $P(0,0) = 0$. This approach aims to enhance the resolution of distortions in scenarios where it is challenging to distinguish between the presence of Axion Dark Matter and the absence of Dark Matter.
+  
 * Refactor the created module, ensuring that all functions are not confined within a single class. Instead, distribute them across different files to facilitate reusability and intelligent code versioning.
   
