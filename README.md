@@ -226,7 +226,9 @@ $$
 \end{align}
 $$
 
-Therefore, if the gradient $∇\Psi(\vec{x_i})$ changes abruptly (and therefore near a dark matter singularity) near a given point $\vec{x_i}$, then $∇P(\vec{x_i})$ will also change abruptly, in the opposite direction, to mantain the equality $∇\Psi(\vec{x_i}) + ∇P(\vec{x_i})= \vec{x_i}-\vec{x_0}$, which is approximately constant near $\vec{x_i}$. The product, therefore, $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i)$ should also change abruptly, once $∇P(x_i,y_i)$ itself change abruptly,  which leads to the function:
+Therefore, if the gradient $∇\Psi(\vec{x_i})$ changes abruptly (and therefore near a dark matter singularity) near a given point $\vec{x_i}$, then $∇P(\vec{x_i})$ will also change abruptly, in the opposite direction, to mantain the equality $∇\Psi(\vec{x_i}) + ∇P(\vec{x_i})= \vec{x_i}-\vec{x_0}$, which is approximately constant near $\vec{x_i}$.
+
+The product, therefore, $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i)$ should also change abruptly, once $∇P(x_i,y_i)$ itself change abruptly,  which leads to the function:
 
 $$
 \begin{align}
