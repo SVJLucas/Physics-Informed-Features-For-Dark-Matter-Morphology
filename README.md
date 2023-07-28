@@ -127,6 +127,8 @@ $$
 
 By imposing a potential profile, we can now estimate the source position. We must then estimate the value of the constant $k$. For the simulation (DeepLens Models I, II, III), a value of $k \approx 1$ works well.
 
+Following this process, we are able to obtain a reconstructed image $\hat{I}_{\hat{\mathcal{S}}}(x_s,y_s)$ of the source.
+
 ## Approximate the Source Galaxy as the Sersic Profile
 
 The Sersic profile is a mathematical function that describes how the intensity I of the light emitted by a galaxy varies with the distance R from its center. It is widely used in astronomy to characterize the radial brightness profiles of galaxies.
@@ -180,7 +182,7 @@ And then:
 
 $$
 \begin{align}
-\boxed{x_0^{\*},y_0^{\*},\theta^{\*},q^{\*},n^{\*},R_{ser}^{\*} = \text{minimize}\ \Sigma_{x_s,y_s} ||I_S(x_s,y_s|x_0,y_0,\theta,q,n,R_{ser},I_0) - \mathcal{S}(x_s,y_s)||^2}
+\boxed{x_0^{\*},y_0^{\*},\theta^{\*},q^{\*},n^{\*},R_{ser}^{\*} = \text{minimize}\ \Sigma_{x_s,y_s} ||I_S(x_s,y_s|x_0,y_0,\theta,q,n,R_{ser},I_0) - \hat{I}_{\hat{\mathcal{S}}}(x_s,y_s)||^2}
 \end{align}
 $$
 
@@ -191,7 +193,7 @@ Now that we have an estimated clean version of the source galaxy, we can use the
 
 $$
 \begin{align}
-∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{\mathcal{I}(x_i,y_i)}\Bigg)
+∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)
 \end{align}
 $$
 
@@ -203,9 +205,9 @@ P(0,0) = 0
 \end{align}
 $$
 
-Where $Z(\theta, q) \in \mathbb{R}^{2\times2}$ is a positive definite matrix that only depends on $\theta$ and $q$.
+Where $Z(\theta, q) \in \mathbb{R}^{2\times2}$ is a positive definite matrix that only depends on $\theta$ and $q$ and $I_{\mathcal{I}}(x_i,y_i)$ is the intensity of the formed image, and, then, the image itself.
 
-Moreover, we define:
+Moreover, we also have:
 
 $$
 \begin{align}
@@ -235,7 +237,7 @@ The product, therefore, $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i)$ should also
 
 $$
 \begin{align}
-\boxed{\mathcal{F}(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{\mathcal{I}(x_i,y_i)}\Bigg)}
+\boxed{\mathcal{F}(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)}
 \end{align}
 $$
 
