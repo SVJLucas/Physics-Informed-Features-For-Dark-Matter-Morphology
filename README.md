@@ -195,7 +195,7 @@ Now that we have an estimated clean version of the source galaxy, we can use the
 
 $$
 \begin{align}
-∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)
+∇P(x_i,y_i)^T Z(\theta^{\*}, q^{\*}) ∇P(x_i,y_i) = \frac{R_{ser}^{\* 2}}{b_n^{\* 2n\*}}ln^{2n*}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)
 \end{align}
 $$
 
@@ -239,7 +239,7 @@ The product, therefore, $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i)$ should also
 
 $$
 \begin{align}
-\boxed{\mathcal{F}(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)}
+\boxed{\mathcal{F}(x_i,y_i) = \frac{R_{ser}^{\* 2}}{b_n^{\* 2n\*}}ln^{2n*}\Bigg(\frac{I_0}{I_{\mathcal{I}}(x_i,y_i)}\Bigg)}
 \end{align}
 $$
 
