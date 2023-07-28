@@ -7,7 +7,7 @@
 
 
 
-The Physics Informed Features module, created under the international Google Summer of Code program, with  is a complex tool designed for the generation and manipulation of data in relativistic gravitational lensing studies.
+The Physics Informed Features module, created under the international **Google Summer of Code program**, in partnership with the institution Machine Learning for Science (ML4SCI), is a complex tool designed for the generation and manipulation of data in relativistic gravitational lensing studies.
 
 
 # Problem Description
