@@ -1,7 +1,8 @@
 # Physics Informed Features For Dark Matter Morphology
 
 
-![GSoC](https://github.com/SVJLucas/Physics-Informed-Features-For-Dark-Matter-Morphology/assets/60625769/26b4f372-8568-4e26-a499-41c5128f18f8)
+![GSoC (1)](https://github.com/SVJLucas/Physics-Informed-Features-For-Dark-Matter-Morphology/assets/60625769/3818c901-e738-4d6a-a53a-d39adac87e2c)
+
 
 
 The Physics Informed Features module, created under the international Google Summer of Code program, with  is a complex tool designed for the generation and manipulation of data in relativistic gravitational lensing studies.
