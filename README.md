@@ -182,7 +182,86 @@ $$
 $$
 
 
+## Gravitational Anomalies Reconstruction
 
+Now that we have an estimated clean version of the source galaxy, we can use the obtained parameters to find an **Anisotropic Eikonal Partial Differential Equation** that allows us to obtain the potential:
+
+$$
+\begin{align}
+∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{\mathcal{I}(x_i,y_i)}\Bigg)
+\end{align}
+$$
+
+With the boundary condition of:
+
+$$
+\begin{align}
+P(0,0) = 0
+\end{align}
+$$
+
+Where $Z(\theta, q) \in \mathbb{R}^{2\times2}$ is a positive definite matrix that only depends on $\theta$ and $q$.
+
+Moreover, we define:
+
+$$
+\begin{align}
+\Psi(x_i,y_i) = \frac{x_i^2+y_i^2}{2}-P(x_i,y_i)-(x_0x_i+y_0y_i)
+\end{align}
+$$
+
+To avoid solving the partial differential equation, since we only wish to get a glimpse of the distortions, we can do:
+
+$$
+\begin{align}
+∇\Psi(\vec{x_i}) = \vec{x_i}-∇P(\vec{x_i})-\vec{x_0}
+\end{align}
+$$
+
+Which means:
+
+$$
+\begin{align}
+∇\Psi(\vec{x_i}) + ∇P(\vec{x_i})= \vec{x_i}-\vec{x_0}
+\end{align}
+$$
+
+Therefore, if the gradient $∇\Psi(\vec{x_i})$ changes abruptly (and therefore near a dark matter singularity) near a given point $\vec{x_i}$, then $∇P(\vec{x_i})$ will also change abruptly, in the opposite direction, to mantain the equality $∇\Psi(\vec{x_i}) + ∇P(\vec{x_i})= \vec{x_i}-\vec{x_0}$, which is approximately constant near $\vec{x_i}$. The product, therefore, $∇P(x_i,y_i)^T Z(\theta, q) ∇P(x_i,y_i)$ should also change abruptly, once $∇P(x_i,y_i)$ itself change abruptly,  which leads to the function:
+
+$$
+\begin{align}
+\boxed{\mathcal{F}(x_i,y_i) = \frac{R_{ser}^2}{b_n^{2n}}ln^{2n}\Bigg(\frac{I_0}{\mathcal{I}(x_i,y_i)}\Bigg)}
+\end{align}
+$$
+
+Changing abruptly as well. To find gravitational distortion points, we simply find the derivatives of the function $\mathcal{F}$ on both the x and y axes. Once our image has very low resolution, we'll use fifth-order finite difference to approximate the derivative:
+
+$$
+\begin{align}
+df_i \approx \frac{-25f_i + 48f_{i+1} - 36f_{i+2} + 16f_{i+3} - 3f_{i+4}}{12h}
+\end{align}
+$$
+
+
+Thus, the anomaly image can be obtained by:
+
+$$
+\begin{align}
+\mathcal{A}_{raw}(x_i,y_i) = \frac{ \partial^2 \mathcal{F}}{\partial x \partial y}(x_i,y_i)
+\end{align}
+$$
+
+However, to better visualize the final result, avoiding numerical errors due to the high absolute values of the potential near the singularities, as well as numerical errors in the calculation of the derivatives, we will make a post procees by doing the following transformation:
+
+$$
+\begin{align}
+\boxed{\mathcal{A}(x_i,y_i) = \Bigg|Tanh\Bigg(\frac{1}{F_Q}\frac{ \partial^2 \mathcal{F}}{\partial x \partial y}(x_i,y_i)\Bigg)\Bigg|}
+\end{align}
+$$
+
+Where $F_Q$ is a normalization constant.
+
+You can get any of $\mathcal{A}_{raw}(x_i,y_i)$ or $\mathcal{A}(x_i,y_i)$ just changing the boolean *post_process* in one of the module functions.
 
 
 
