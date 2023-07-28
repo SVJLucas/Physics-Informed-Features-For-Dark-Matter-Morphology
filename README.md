@@ -205,7 +205,7 @@ P(0,0) = 0
 \end{align}
 $$
 
-Where $Z(\theta, q) \in \mathbb{R}^{2\times2}$ is a positive definite matrix that only depends on $\theta$ and $q$ and $I_{\mathcal{I}}(x_i,y_i)$ is the intensity of the formed image, and, then, the image itself.
+Where $Z(\theta, q) \in \mathbb{R}^{2\times2}$ is a positive definite matrix that only depends on $\theta$ and $q$ and $I_{\mathcal{I}}(x_i,y_i)$ is the light intensity of the formed image, and, then, the image itself.
 
 Moreover, we also have:
 
