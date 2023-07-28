@@ -54,6 +54,8 @@ Now, the new module performs the following tasks:
 
 * **Plotting of Results**: The module itself comes equipped with functions to facilitate the plotting of results.
 
+To understand how to use these features, please refer to the Jupyter notebook 'examples.ipynb' in the "Examples" Folder which provides various examples of usage.
+
 # Results
 
 First, we may remember the following:
